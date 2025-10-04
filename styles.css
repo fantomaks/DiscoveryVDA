@@ -140,7 +140,7 @@ body {
 }
 
 .btn-vda {
-    background: #7c3aed;
+    background: #8B0000;
     color: white;
     border: none;
     font-weight: 600;
@@ -149,9 +149,9 @@ body {
 }
 
 .btn-vda:hover {
-    background: #6d28d9;
+    background: #A52A2A;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.3);
 }
 
 /* Sections */
