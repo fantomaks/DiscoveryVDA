@@ -107,11 +107,12 @@ body {
 }
 .hero-with-bg {
     position: relative;
-    background: url('assets/hero-bg.png') right center / cover no-repeat;
-    min-height: clamp(380px, 45vw, 520px); /* высота полосы */
-    display: grid;
-    place-items: center;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: url('assets/hero-bg.png') no-repeat right top / auto auto; /* Изображение целиком, выравнивание по правому краю */
+    height: auto; /* Высота блока определяется изображением */
 }
 
 .hero-with-bg::after {
@@ -130,8 +131,8 @@ body {
 }
 
 .hero-content {
-    width: min(800px, 70%); /* центрируем контент в левой 70%-зоне */
-    margin-left: clamp(0px, 3vw, 24px);
+    width: min(800px, 55%); /* центрируем контент в левой 70%-зоне */
+    margin-left: 0;
     text-align: left;
     position: relative;
     z-index: 1; /* поверх оверлея */
@@ -139,7 +140,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-with-bg {
-        background-position: 85% center; /* медведь правее, тексту больше места */
+        background-position: 100% center; /* медведь правее, тексту больше места */
         background-attachment: scroll;
     }
     .hero-content {
