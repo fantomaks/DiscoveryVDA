@@ -1,3 +1,25 @@
+/* Top banner image section */
+.top-banner {
+    margin-top: 72px; /* компенсируем фиксированный хедер */
+    background: #0f0f0f;
+}
+
+.top-banner .banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .top-banner {
+        margin-top: 64px;
+    }
+    .top-banner .banner-image {
+        max-height: 220px;
+        object-fit: cover;
+    }
+}
 /* Reset and base styles */
 * {
     margin: 0;
@@ -8,8 +30,8 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: #3a2b2b;
+    background-color: #f6eee3; /* светло-бежевый фон вместо белого */
 }
 
 .container {
@@ -20,7 +42,7 @@ body {
 
 /* Header */
 .header {
-    background: #fff;
+    background: #f6eee3; /* светло-бежевый */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
@@ -39,7 +61,7 @@ body {
 }
 
 .logo h1 {
-    color: #2563eb;
+    color: #4a0d0d; /* темно-бордовый */
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -59,7 +81,7 @@ body {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: #2563eb;
+    color: #8B0000; /* бордовый */
 }
 
 .hamburger {
@@ -78,8 +100,8 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #f6eee3 0%, #8B0000 100%); /* бежево-бордовый */
+    color: #4a0d0d; /* темно-бордовый текст */
     padding: 120px 0 80px;
     text-align: center;
 }
@@ -119,24 +141,24 @@ body {
 }
 
 .btn-primary {
-    background: #2563eb;
-    color: white;
+    background: #8B0000; /* бордовая основная кнопка */
+    color: #f6eee3;
 }
 
 .btn-primary:hover {
-    background: #1d4ed8;
+    background: #A52A2A;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
     background: transparent;
-    color: white;
-    border-color: white;
+    color: #4a0d0d;
+    border-color: #4a0d0d;
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #2563eb;
+    background: #f6eee3;
+    color: #8B0000;
 }
 
 .btn-vda {
@@ -160,7 +182,7 @@ body {
 }
 
 .section.bg-light {
-    background-color: #f8fafc;
+    background-color: #f3e7d6; /* светлая вариация бежевого */
 }
 
 .section-title {
@@ -168,7 +190,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
-    color: #1e293b;
+    color: #4a0d0d; /* темно-бордовый заголовок */
 }
 
 /* Content Grid */
@@ -180,7 +202,7 @@ body {
 }
 
 .content-card {
-    background: white;
+    background: #fbf4ea; /* карточки бежевые */
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -195,7 +217,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #2563eb;
+    color: #4a0d0d;
 }
 
 /* Meeting Steps */
@@ -214,8 +236,8 @@ body {
 .step-number {
     width: 60px;
     height: 60px;
-    background: #2563eb;
-    color: white;
+    background: #8B0000;
+    color: #f6eee3;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -229,7 +251,7 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #4a0d0d;
 }
 
 /* Cost Info */
@@ -241,7 +263,7 @@ body {
 }
 
 .cost-card {
-    background: white;
+    background: #fbf4ea;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -252,7 +274,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #059669;
+    color: #4a0d0d;
 }
 
 /* How to Join */
@@ -271,12 +293,12 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #2563eb;
+    color: #4a0d0d;
 }
 
 /* Schedule Preview */
 .schedule-preview {
-    background: white;
+    background: #fbf4ea;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -287,7 +309,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: #1e293b;
+    color: #4a0d0d;
 }
 
 .schedule-item {
@@ -296,14 +318,14 @@ body {
     align-items: center;
     padding: 1rem;
     margin-bottom: 0.5rem;
-    background: #f8fafc;
+    background: #f3e7d6;
     border-radius: 8px;
     text-align: center;
 }
 
 .schedule-item .day {
     font-weight: 600;
-    color: #2563eb;
+    color: #4a0d0d;
     text-align: left;
 }
 
@@ -328,7 +350,7 @@ body {
 }
 
 .benefit-card {
-    background: white;
+    background: #fbf4ea;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -343,7 +365,7 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #2563eb;
+    color: #4a0d0d;
 }
 
 /* Stories Grid */
@@ -355,7 +377,7 @@ body {
 }
 
 .story-card {
-    background: white;
+    background: #fbf4ea;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -383,7 +405,7 @@ body {
 .faq-item {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: white;
+    background: #fbf4ea;
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
@@ -392,7 +414,7 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #1e293b;
+    color: #4a0d0d;
 }
 
 /* Contact CTA */
@@ -400,7 +422,7 @@ body {
     text-align: center;
     margin-top: 3rem;
     padding: 2rem;
-    background: #f8fafc;
+    background: #fbf4ea;
     border-radius: 12px;
 }
 
@@ -413,8 +435,8 @@ body {
 
 /* Footer */
 .footer {
-    background: #1e293b;
-    color: white;
+    background: #4a0d0d; /* темно-бордовый */
+    color: #f6eee3;
     padding: 3rem 0 1rem;
 }
 
@@ -428,7 +450,7 @@ body {
 .footer-section h3,
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: #2563eb;
+    color: #f6eee3;
 }
 
 .footer-section ul {
@@ -446,7 +468,7 @@ body {
 }
 
 .footer-section a:hover {
-    color: #2563eb;
+    color: #fbdfc8; /* светлее при наведении */
 }
 
 .footer-bottom {
@@ -544,6 +566,12 @@ body {
     margin-top: 2rem;
 }
 
+/* Предотвращаем выход текста за края на мобильных */
+h1, h2, h3, h4, h5, h6, p, a, li, blockquote {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 /* Стили для Яндекс карты */
 #map {
     border: 1px solid #e2e8f0;
@@ -565,7 +593,7 @@ body {
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
+    background: #f6eee3;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     padding: 1rem;
     gap: 1rem;
@@ -585,7 +613,7 @@ body {
 
 /* Header scroll effect */
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(246, 238, 227, 0.95);
     backdrop-filter: blur(10px);
 }
 
@@ -611,7 +639,7 @@ body {
         top: 100%;
         left: 0;
         right: 0;
-        background: white;
+        background: #f6eee3;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         padding: 1rem;
         flex-direction: column;
