@@ -60,10 +60,22 @@ body {
     margin: 0 auto;
 }
 
+.logo {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+}
+
 .logo h1 {
     color: #4a0d0d; /* темно-бордовый */
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.logo-icon {
+    width: 40px; /* Размер иконки */
+    height: 40px; /* Квадратный размер для svg */
+    vertical-align: middle; /* Выравнивание по середине текста */
+    margin-right: 10px; /* Отступ перед текстом */
 }
 
 .nav-menu {
