@@ -102,8 +102,59 @@ body {
 .hero {
     background: linear-gradient(135deg, #f6eee3 0%, #8B0000 100%); /* бежево-бордовый */
     color: #4a0d0d; /* темно-бордовый текст */
-    padding: 120px 0 80px;
+    padding: 0; /* управляем внутренними отступами через контент */
     text-align: center;
+}
+.hero-with-bg {
+    position: relative;
+    background: url('assets/hero-bg.png') right center / cover no-repeat;
+    min-height: clamp(380px, 45vw, 520px); /* высота полосы */
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.hero-with-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(246,238,227,0.55) 0%, rgba(246,238,227,0.35) 45%, rgba(246,238,227,0.10) 70%, rgba(74,13,13,0.08) 100%); /* менее бледный оверлей */
+}
+
+.hero-with-bg .container {
+    position: relative;
+    width: 100%;
+    padding: clamp(80px, 10vw, 140px) 20px clamp(60px, 8vw, 100px);
+    display: flex;
+    justify-content: flex-start;
+}
+
+.hero-content {
+    width: min(800px, 70%); /* центрируем контент в левой 70%-зоне */
+    margin-left: clamp(0px, 3vw, 24px);
+    text-align: left;
+    position: relative;
+    z-index: 1; /* поверх оверлея */
+}
+
+@media (max-width: 768px) {
+    .hero-with-bg {
+        background-position: 85% center; /* медведь правее, тексту больше места */
+        background-attachment: scroll;
+    }
+    .hero-content {
+        width: 100%;
+        margin: 0 16px;
+        text-align: left;
+    }
+    .hero-with-bg::after { background: linear-gradient(90deg, rgba(246,238,227,0.85) 0%, rgba(246,238,227,0.5) 55%, rgba(246,238,227,0.18) 85%, rgba(74,13,13,0.08) 100%); }
+}
+
+/* Параллакс на десктопах */
+@media (min-width: 1024px) {
+    .hero-with-bg {
+        background-attachment: fixed;
+    }
 }
 
 .hero-title {
